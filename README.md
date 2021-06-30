@@ -7,9 +7,9 @@
 
 # 1 – Stop zabbix server 
 
-'''bash
+```bash
 Systemctl stop zabbix server 
-'''
+```
 
 2 - Upgrade Zabbix Server and Frontend
 
