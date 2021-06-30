@@ -11,32 +11,46 @@
 Systemctl stop zabbix server 
 ```
 
-2 - Upgrade Zabbix Server and Frontend
+# 2 - Upgrade Zabbix Server and Frontend
 
+```bash
 rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/$(rpm -E %{rhel})/x86_64/zabbix-release-5.0-1.el$(rpm -E %{rhel}).noarch.rpm
+```
+```bash
 yum clean all
+```
+```bash
 yum zabbix-server-mysql zabbix-web-mysql
+```
 
+# 3- start zabbix server
 
-3- start zabbix server
-
+```bash
 systemctl start zabbix-server
+```
+```bash
 zabbix_server -V
+```
+```bash
 cat /var/log/zabbix/zabbix_server.log | grep database
+```
 
 
+# 4 – patch dbfix sql
 
-4 – patch dbfix sql
-
+```bash
 wget https://git.zabbix.com/projects/ZBX/repos/zabbix/raw/database/mysql/double.sql
+```
+```bash
 mysql -u'zabbix' -p'123' zabbix < double.sql
-
+```
 
 check the new table description
-
+```bash
 mysql -u'zabbix' -p'zabbixDBpass' zabbix -e "show create table history;"
-
-5 – add line in zabbix.conf.php
+```
+# 5 – add line in zabbix.conf.php
 Now we need to add the line bellow to “zabbix.conf.php” with the text editor (“nano /etc/zabbix/web/zabbix.conf.php“) to remove warning message from the frontend:
-
+```bash
 $DB['DOUBLE_IEEE754'] = 'true';
+```
