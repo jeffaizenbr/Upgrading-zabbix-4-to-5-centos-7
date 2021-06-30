@@ -1,13 +1,15 @@
-Minimum zabbix 5 databases versions 
+# Minimum zabbix 5 databases versions 
 
 •	MySQL 5.5.62
 •	MariaDB 10.0.37
 •	PostgreSQL 9.2.24
 
 
-1 – Stop zabbix server 
+# 1 – Stop zabbix server 
 
+'''bash
 Systemctl stop zabbix server 
+'''
 
 2 - Upgrade Zabbix Server and Frontend
 
