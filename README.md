@@ -47,7 +47,7 @@ mysql -u'zabbix' -p'123' zabbix < double.sql
 
 check the new table description
 ```bash
-mysql -u'zabbix' -p'zabbixDBpass' zabbix -e "show create table history;"
+mysql -u'zabbix' -p'123' zabbix -e "show create table history;"
 ```
 # 5 – add line in zabbix.conf.php
 Now we need to add the line bellow to “zabbix.conf.php” with the text editor (“nano /etc/zabbix/web/zabbix.conf.php“) to remove warning message from the frontend:
