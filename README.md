@@ -20,7 +20,7 @@ rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/$(rpm -E %{rhel})/x86_64/zabbix
 yum clean all
 ```
 ```bash
-yum zabbix-server-mysql zabbix-web-mysql
+yum update zabbix-server-mysql zabbix-web-mysql
 ```
 
 # 3- start zabbix server
