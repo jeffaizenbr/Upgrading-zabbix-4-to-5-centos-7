@@ -80,7 +80,7 @@ yum install php-XXXX
 yum update zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf
 ```
 ```bash
-yum remove zabbix-web-4.* -y ; yum install zabbix-web-mysql-scl zabbix-apache-conf-scl
+yum remove zabbix-web-4.* -y ; yum install zabbix-web-mysql-scl zabbix-apache-conf-scl -y
 ```
 ## Database issue steps
 
