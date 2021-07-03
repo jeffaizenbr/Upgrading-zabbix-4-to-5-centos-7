@@ -8,7 +8,7 @@
 # 1 – Stop zabbix server 
 
 ```bash
-Systemctl stop zabbix-server 
+systemctl stop zabbix-server 
 ```
 
 # 3 - Create directories for backup files 
