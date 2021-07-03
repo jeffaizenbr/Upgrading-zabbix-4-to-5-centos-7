@@ -38,7 +38,7 @@ mysqldump -h localhost -u'root' -p'123' --single-transaction 'zabbix' | gzip > /
 # 7 - Upgrade Zabbix Server and Frontend
 
 ```bash
-rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/$(rpm -E %{rhel})/x86_64/zabbix-release-5.0-1.el$(rpm -E %{rhel}).noarch.rpm
+rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/$(rpm -E %{rhel})/x86_64/zabbix-release-5.0-1.el$(rpm -E %{rhel}).noarch.rpm ; yum install zabbix-release -y
 ```
 ```bash
 yum clean all
