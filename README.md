@@ -127,7 +127,7 @@ php_value[date.timezone] = America/Sao_Paulo
 # 2.6 - start zabbix server
 
 ```bash
-systemctl enable systemctl enable rh-php72-php-fpm ; systemctl start systemctl enable rh-php72-php-fpm ; systemctl restart httpd
+systemctl enable rh-php72-php-fpm ; systemctl start rh-php72-php-fpm ; systemctl restart httpd
 ```
 ```bash
 systemctl start zabbix-server ; tail -f /var/log/zabbix/zabbix_server.log
