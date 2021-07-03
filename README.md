@@ -70,7 +70,7 @@ yum install centos-release-scl -y
 yum list rh-php7\*
 ```
 ```bash
-yum install php-XXXX
+yum install rh-php72* -y
 ```
 
 # 2.2 - Update zabbix packages
