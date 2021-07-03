@@ -41,7 +41,15 @@ mysqldump -h localhost -u'root' -p'123' --single-transaction 'zabbix' | gzip > /
 rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/$(rpm -E %{rhel})/x86_64/zabbix-release-5.0-1.el$(rpm -E %{rhel}).noarch.rpm ; yum clean all ; yum repolist ; yum install zabbix-release -y
 ```
 ```bash
-yum clean all
+vim /etc/yum.repos.d/zabbix.repo
+```
+```bash
+[zabbix-frontend]
+name=Zabbix Official Repository frontend - $basearch
+baseurl=http://repo.zabbix.com/zabbix/5.0/rhel/7/$basearch/frontend
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
 ```
 ```bash
 yum update zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf
