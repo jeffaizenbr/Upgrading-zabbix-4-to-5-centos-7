@@ -61,6 +61,9 @@ yum install php-XXXX
 ```bash
 yum clean all ; yum repolist all
 ```
+```bash
+yum remove zabbix-web-4.* -y ; yum install zabbix-web-mysql-scl zabbix-apache-conf-scl
+```
 
 # 8 - start zabbix server
 
