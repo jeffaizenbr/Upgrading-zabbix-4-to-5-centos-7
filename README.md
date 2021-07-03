@@ -80,6 +80,7 @@ yum update zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf
 ```bash
 yum remove zabbix-web-4.* -y ; yum install zabbix-web-mysql-scl zabbix-apache-conf-scl
 ```
+## Database issue steps
 
 # 2.3 - Resolving doubleSQL issue on database 
 
@@ -100,6 +101,7 @@ check the new table description
 ```bash
 mysql -u'zabbix' -p'123' zabbix -e "show create table history;"
 ```
+## Configuration steps
 
 # 2.4 – Add line in zabbix.conf.php
 
@@ -118,6 +120,7 @@ vim /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
 ```bash
 php_value[date.timezone] = America/Sao_Paulo
 ```
+## Start and test de zabbix uptade
 
 # 2.6 - start zabbix server
 
