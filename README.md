@@ -46,6 +46,21 @@ yum clean all
 ```bash
 yum update zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf
 ```
+```bash
+yum install scl-utils -y
+```
+```bash
+yum install centos-release-scl -y
+```
+```bash
+yum list rh-php7\*
+```
+```bash
+yum install php-XXXX
+```
+```bash
+yum clean all ; yum repolist all
+```
 
 # 8 - start zabbix server
 
