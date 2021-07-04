@@ -77,7 +77,7 @@ yum install rh-php72* -y
 
 
 ```bash
-yum update zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf
+yum update zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf -y
 ```
 ```bash
 yum remove zabbix-web-4.* -y ; yum install zabbix-web-mysql-scl zabbix-apache-conf-scl -y
