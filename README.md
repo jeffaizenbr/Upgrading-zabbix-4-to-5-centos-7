@@ -103,6 +103,15 @@ check the new table description
 ```bash
 mysql -u'zabbix' -p'123' zabbix -e "show create table history;"
 ```
+
+OR using PosgreSQL
+
+```bash
+/usr/pgsql-9.3/bin/psql -U db_zabbix -p 5432 -f /home/double.sql zabbix2 
+```
+
+
+
 ## Configuration steps
 
 # 2.4 – Add line in zabbix.conf.php
