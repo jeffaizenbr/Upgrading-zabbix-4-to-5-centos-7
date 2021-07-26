@@ -66,6 +66,7 @@ yum install scl-utils -y
 ```bash
 yum install centos-release-scl -y
 ```
+==========================
 obs: to install no RHEL 7 enable centos-release-scp 
 ```bash
 sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
