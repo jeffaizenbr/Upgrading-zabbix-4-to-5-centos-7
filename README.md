@@ -66,6 +66,17 @@ yum install scl-utils -y
 ```bash
 yum install centos-release-scl -y
 ```
+obs: to install no RHEL 7 enable centos-release-scp 
+```bash
+sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
+```
+```bash
+sudo yum-config-manager --add-repo=https://copr.fedoraproject.org/coprs/rhscl/centos-release-scl/repo/epel-7/rhscl-centos-release-scl-epel-7.repo
+```
+```bash
+sudo yum install centos-release-scl
+```
+===========================
 ```bash
 yum list rh-php7\*
 ```
